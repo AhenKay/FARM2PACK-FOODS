@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Details | FARM2PACK FOODS</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="container nav-content">
+      <a href="index.html" class="logo">FARM<span style="color: rgb(155, 106, 16);">2</span>PACK</a>
+
+      <div class="menu-icon" id="menu-icon">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <nav id="main-nav" class="main-nav">
+        <ul class="nav-links">
+          <li><a href="index.html#products">Products</a></li>
+          <li><a href="index.html">How to</a></li>
+          <li><a href="index.html">Locate Us</a></li>
+          <li><a href="index.html">About Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="section-title">
+      <h2>Product Details</h2>
+    </div>
+
+    <div class="details-container">
+      <div class="back-button">
+        <a href="index.html#products"><i class="fas fa-arrow-left"></i> Back to Products</a>
+      </div>
+
+      <div id="product-details">
+        <!-- Product details will be loaded here via JavaScript -->
+        <p>Loading product details...</p>
+        <p>Store in a cool dry place, away from direct sunlight or high temperature or moisture.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-bottom">
+      <div class="copyright-info">
+        <p>© 2026 <strong>FARM2PACK FOODS</strong> — From Our Farm To Your Pack 🌱</p>
+        <p class="acknowledgement">Website developed by <a class="developer" href="https://github.com/AhenKay">AhenkayDev</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+  <script>
+    // Load product details based on URL parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const productName = urlParams.get('product');
+
+    const productDetails = {
+      'Organic Wheat': {
+        image: '/Images/wheat.webp',
+        image2: '/Images/cereals-grains.webp',
+        image3: '/Images/tree-cereal-grains.png',
+        title: 'Organic Wheat',
+        description: 'Stone-milled, nutrient-rich wheat perfect for meals.',
+        details: `Our Organic Wheat is sourced from trusted farms that practice sustainable agriculture. 
+                  Each grain is carefully selected and processed to retain maximum nutritional value. 
+                  Rich in fiber, protein, and essential minerals, it's perfect for making whole wheat flour, 
+                  breads, and other wholesome dishes. No chemicals, no preservatives – just pure organic goodness.`,
+        ingredients: 'Powder, salt, sugar and milk.',
+        benefits: [
+          'High in dietary fiber',
+          'Rich in protein and B vitamins',
+          'Stone-milled for better digestion',
+          '100% organic and chemical-free',
+          'Perfect for baking and cooking'
+        ]
+      },
+      'Tom Brown': {
+        image: '/Images/tombrown.jpg',
+        image2: '/Images/cereals-grains.webp',
+        image3: '/Images/grains-and-cereals.png',
+        title: 'Tom Brown',
+        description: 'Finely grinded roasted grains, rich in fiber and energy.',
+        details: `Tom Brown is a traditional West African meal made from finely ground roasted grains. 
+                  It's a nutritious, energy-packed meal that's perfect for breakfast or any time of day. 
+                  Our Tom Brown is made from premium quality roasted grains and is ground to a fine texture 
+                  for easy mixing. It's packed with fiber, minerals, and vitamins that support healthy digestion 
+                  and sustained energy throughout the day.`,
+        ingredients: 'Maize, soya beans, peanuts, and rice.',
+        benefits: [
+          'High energy content',
+          'Rich in minerals and vitamins',
+          'Supports healthy digestion',
+          'Traditional West African meal'
+        ]
+      },
+      'Roasted Peanuts': {
+        image: '/Images/roasted-peanuts.avif',
+        image2: '/Images/cereals-grains.webp',
+        image3: '/Images/barley-wheat-plant.png',
+        title: 'Organic Roasted Peanuts',
+        description: 'Carefully selected, clean and naturally grown roasted peanuts.',
+        details: `Our Organic Roasted Peanuts are carefully selected from the finest harvests 
+                  and roasted to perfection. They're a delicious, protein-packed snack perfect for 
+                  any time of day. Rich in healthy fats, protein, and vitamins, these peanuts are 
+                  great for snacking, making peanut butter, or adding to your favorite recipes. 
+                  100% organic, no additives, no salt unless you prefer salted.`,
+        ingredients: 'Powder, salt, sugar and milk.',
+        benefits: [
+          'Excellent source of plant-based protein',
+          'Rich in healthy monounsaturated fats',
+          'High in antioxidants',
+          'No added preservatives or chemicals',
+          'Perfect for snacking or cooking'
+        ]
+      },
+      'Sesame Seeds': {
+        image: '/Images/spoonful_of_sesame_seeds.webp',
+        image2: '/Images/bowl-of-white-sesame-seeds.webp',
+        image3: '/Images/natural-sesame-seeds-piled.webp',
+        title: 'Organic Sesame Seeds',
+        description: 'Nutritious and versatile organic sesame seeds.',
+        details: `Our Organic Sesame Seeds are sourced from the best farms and are packed with nutrients. 
+                  These tiny seeds are a powerhouse of calcium, iron, and healthy fats. They can be used 
+                  in baking, cooking, or as a topping for salads and dishes. Enjoy the nutty flavor and 
+                  numerous health benefits of our organic sesame seeds.`,
+        ingredients: 'Sesame seeds.',
+        benefits: [
+          'Rich in calcium and iron',
+          'High in healthy fats',
+          'Great source of fiber',
+          'Versatile for cooking and baking',
+          '100% organic and natural'
+        ]
+      },
+      'Oats': {
+        image: '/Images/oats.webp',
+        image2: '/Images/oats-pouring-from-bowl.png',
+        image3: '/Images/oat-porridge.png',
+        title: 'Organic Oats',
+        description: 'Whole grain oats for a healthy lifestyle.',
+        details: `Our Organic Oats are whole grain oats that are perfect for a nutritious breakfast or snack. 
+                  They are rich in fiber, vitamins, and minerals that support heart health and digestion. 
+                  Enjoy them as oatmeal, in smoothies, or baked into your favorite recipes. 
+                  Our oats are 100% organic, non-GMO, and free from additives.`,
+        ingredients: 'Whole grain oats.',
+        benefits: [
+          'High in dietary fiber',
+          'Supports heart health',
+          'Rich in vitamins and minerals',
+          'Versatile for various recipes',
+          '100% organic and non-GMO'
+        ]
+      },
+      'Millet': {
+        image: '/Images/millet-grain-and-powder.webp',
+        image2: '/Images/millet-in-bowl-and-spoon.png',
+        image3: '/Images/millet-branch.webp',
+        title: 'Organic Millet',
+        description: 'Nutritious and gluten-free organic millet.',
+        details: `Our Organic Millet is a gluten-free grain that is rich in nutrients and easy to digest. 
+                  It's a great alternative for those with gluten sensitivities and is packed with protein, 
+                  fiber, and essential minerals. Use it in porridge, salads, or as a side dish. 
+                  Our millet is 100% organic and free from any chemicals or additives.`,
+        ingredients: 'Millet grains.',
+        benefits: [
+          'Gluten-free and easy to digest',
+          'High in protein and fiber',
+          'Rich in essential minerals',
+          'Versatile for cooking',
+          '100% organic and natural'
+        ]
+      }
+    };
+
+    const details = productDetails[productName] || null;
+
+    if (details) {
+      document.getElementById('product-details').innerHTML = `
+        <div class="detail-content">
+          <div class="detail-images">
+            <img src="${details.image}" alt="${details.title}" class="detail-image">
+            <img src="${details.image2}" alt="${details.title}" class="detail-image">
+            <img src="${details.image3}" alt="${details.title}" class="detail-image">
+          </div>
+          <div class="detail-text">
+            <h1>${details.title}</h1>
+            <p class="detail-description">${details.description}</p>
+            
+            <h3>About This Product</h3>
+            <p>${details.details}</p>
+
+            <h3>Ingredients</h3>
+            <p>${details.ingredients}</p>
+            
+            <h3>Key Benefits</h3>
+            <ul class="benefits-list">
+              ${details.benefits.map(benefit => `<li>${benefit}</li>`).join('')}
+            </ul>
+            
+            <h3>Precaution</h3>
+            <p class="precaution">Store in a cool dry place, away from direct sunlight or high temperature or moisture.</p>
+            
+            <div class="detail-actions">
+              <a class="order-btn" href="https://wa.me/233500292732?text=I%20would%20like%20to%20order%20${encodeURIComponent(productName)}">Order on WhatsApp</a>
+              <a class="call-btn" href="tel:+233500292732">Call to order</a>
+            </div>
+          </div>
+        </div>
+      `;
+    } else {
+      document.getElementById('product-details').innerHTML = `
+        <p>Product not found. <a href="index.html#products">View all products</a></p>
+      `;
+    }
+  </script>
+</body>
+</html>
