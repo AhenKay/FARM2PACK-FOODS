@@ -82,6 +82,12 @@ header {
   color: white;
 }
 
+.hero-content {
+  max-width: 700px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
 .scroll-indicator {
     position: absolute;
     bottom: 30px;
